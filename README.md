@@ -42,7 +42,7 @@
    OR
 
    ```bash
-   git pull origin upstream
+   git pull upstream main
    ```
 
 10. **Push the updated main back to your own fork**

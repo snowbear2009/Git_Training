@@ -47,9 +47,9 @@
 
 10. **Push the updated main back to your own fork**
 
-```bash
-git push origin main
-```
+    ```bash
+    git push origin main
+    ```
 
 ---
 

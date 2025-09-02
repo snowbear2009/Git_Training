@@ -5,3 +5,6 @@ def hello():
 
 results = hello()
 print(results)
+
+def second_func():
+    return "second_func"

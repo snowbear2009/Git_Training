@@ -5,7 +5,9 @@
 
 2. **Clone the fork you just made to your local machine**
 
-3. **Add the main repo as a remote named `upstream`**
+3. Run ```bash setup-git-config.sh```. This file is present in the root of the repository, more details on what this does is available within the bash file.
+
+4. **Add the main repo as a remote named `upstream`**
     git remote add upstream <URL>
 
 ### Each Time You Want to Contribute a Feature
@@ -34,7 +36,7 @@
    Make sure you're on your `main` branch:
 
    ```bash
-   git switch main
+   git checkout main
    git fetch upstream
    git merge upstream/main
    ```
@@ -71,8 +73,11 @@
 
     ```bash
     git fetch contributor-alias
-    git merge contributor-alias/x
+    git checkout main
+    git merge --no-ff contributor-alias/feature/branch-name -m "Merge: feature description from contributor"
     ```
+    You can avoid having to type ```--no-ff``` each time by configuring Git to always prevent fast-forward merges.
+    There is a config file in the repo,
 
 14. **Push the merged result to the main repo**
 
@@ -81,3 +86,8 @@
     ```
 
 15. **Notify all contributors that main has been updated**
+
+---
+## Recommended commit message format
+
+https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
